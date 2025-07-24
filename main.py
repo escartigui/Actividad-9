@@ -17,6 +17,6 @@ def menu():
                     print(f"El cliente ya existe")
                 else:
                     clientes[codigo] = {}
+                    clientes[codigo]["nombre"] = input("Ingrese el nombre del cliente: ")
 
-          clientes[codigo]["nombre"] = input("Ingrese nombre: ")
 
