@@ -24,15 +24,15 @@ def menu():
             cantiviaje = int(input("Ingrese la cantidad de viajes: "))
             for i in range(cantiviaje):
                 while True:
-                    if cantiviaje >= 5:
-                        print("Solo puedes ingresar 5")
-                        break
+                    if 0 <cantiviaje <= 5:
+                        print(f"Destino:{i + 1}")
+                        nombredestino = input("Ingrese el nombre del destino: ")
+                        clientes[codigo]["viajes"][nombredestino] = {
+                            "Destino": nombredestino,
+                        }
                     else:
-                     print(f"Destino:{i+1}")
-                     nombredestino = input("Ingrese el nombre del destino: ")
-                     clientes[codigo]["viajes"][nombredestino] = {
-                    "Destino" : nombredestino,
-                }
+                        print("maximo de 5 minimo de 1")
+                        break
 
        if op == 2:
         print("Listado")
