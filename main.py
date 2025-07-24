@@ -1,5 +1,6 @@
 clientes = {}
 def menu():
+  while True:
     print("Bienvenido al cliente del usuario")
     print("1.Ingreso de cliente")
     print("2.Mostrar")
@@ -16,11 +17,11 @@ def menu():
                 if codigo in clientes:
                     print(f"El cliente ya existe")
                 else:
-                    clientes[codigo] = {}
-                clientes[codigo]["nombre"] = input("Ingrese el nombre del cliente: ")
-                clientes[codigo]["viajes"] = {}
-                cantiviaje = int(input("Ingrese la cantidad de viajes: "))
-                for i in range(cantiviaje):
-                    print(f"Destino:{i+1}")
-                    nombredestino = input("Ingrese el nombre del destino: ")
-                    clientes[codigo]["viajes"][nombredestino] = {}
+                 clientes[codigo] = {}
+            clientes[codigo]["nombre"] = input("Ingrese el nombre del cliente: ")
+            clientes[codigo]["viajes"] = {}
+            cantiviaje = int(input("Ingrese la cantidad de viajes: "))
+            for i in range(cantiviaje):
+                print(f"Destino:{i+1}")
+                nombredestino = input("Ingrese el nombre del destino: ")
+                clientes[codigo]["viajes"][nombredestino] = {}
