@@ -23,9 +23,14 @@ def menu():
             clientes[codigo]["viajes"] = {}
             cantiviaje = int(input("Ingrese la cantidad de viajes: "))
             for i in range(cantiviaje):
-                print(f"Destino:{i+1}")
-                nombredestino = input("Ingrese el nombre del destino: ")
-                clientes[codigo]["viajes"][nombredestino] = {
+                while True:
+                    if cantiviaje >= 5:
+                        print("Solo puedes ingresar 5")
+                        break
+                    else:
+                     print(f"Destino:{i+1}")
+                     nombredestino = input("Ingrese el nombre del destino: ")
+                     clientes[codigo]["viajes"][nombredestino] = {
                     "Destino" : nombredestino,
                 }
 
@@ -37,4 +42,7 @@ def menu():
             print(f"Viajes Registrados")
             for codigo, viaj in datos["viajes"].items():
                 print(f"Destino: {viaj['Destino']}")
+       if op == 3:
+            print("Hasta que nos volvamos a ver")
+            break
 menu()
