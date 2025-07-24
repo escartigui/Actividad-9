@@ -18,5 +18,3 @@ def menu():
                 else:
                     clientes[codigo] = {}
                     clientes[codigo]["nombre"] = input("Ingrese el nombre del cliente: ")
-
-
