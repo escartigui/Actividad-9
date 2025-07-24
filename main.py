@@ -18,3 +18,9 @@ def menu():
                 else:
                     clientes[codigo] = {}
                     clientes[codigo]["nombre"] = input("Ingrese el nombre del cliente: ")
+                    clientes[codigo]["viajes"] = {}
+                    cantiviaje = int(input("Ingrese la cantidad de viajes: "))
+                    for i in range(cantiviaje):
+                        print(f"Destino:{i+1}")
+                        nombredestino = input("Ingrese el nombre del destino: ")
+                        clientes[codigo]["viajes"][nombredestino] = {}
