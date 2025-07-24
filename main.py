@@ -1,13 +1,13 @@
 clientes = {}
 def menu():
   while True:
-       print("Bienvenido al menu del usuario")
+       print("\nBienvenido al menu del usuario")
        print("1.Ingreso de cliente")
        print("2.Mostrar")
        print("3.Salir")
        op = int(input("Ingrese su opción: "))
 
-       if op == "1":
+       if op == 1:
         cantidad = int(input("Ingrese la cantidad de clientes: "))
         for i in range(cantidad):
             print(f"Cliente:{i+1}")
@@ -29,12 +29,12 @@ def menu():
                     "Destino" : nombredestino,
                 }
 
-        if op == "2":
-         print("\nListado")
+       if op == 2:
+        print("Listado")
         for codigo, datos in clientes.items():
             print(f"\nCodigo: { codigo }")
             print(f"Nombre: { datos['nombre'] }")
-            print(f"viajes")
+            print(f"Viajes Registrados")
             for codigo, viaj in datos["viajes"].items():
-                print(f"Destino{viaj['Destino']}")
+                print(f"Destino: {viaj['Destino']}")
 menu()
