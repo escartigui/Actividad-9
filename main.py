@@ -24,4 +24,15 @@ def menu():
             for i in range(cantiviaje):
                 print(f"Destino:{i+1}")
                 nombredestino = input("Ingrese el nombre del destino: ")
-                clientes[codigo]["viajes"][nombredestino] = {}
+                clientes[codigo]["viajes"][nombredestino] = {
+                    "Destino" : nombredestino,
+                }
+    if op == "2":
+        print("\nListado")
+        for codigo, datos in clientes.items():
+            print(f"\nCodigo: { codigo }")
+            print(f"Nombre: { datos['nombre'] }")
+            print(f"viajes")
+            for codigo, viaj in datos["viajes"].items():
+                print(f"Destino{viaj['Destino']}")
+menu()
