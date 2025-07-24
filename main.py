@@ -6,4 +6,12 @@ def menu():
     print("3.Salir")
     op = int(input("Ingrese su opción"))
 
-    if op == 1:
+    if op == "1":
+        cantidad = int(input("Ingrese la cantidad de clientes: "))
+        for i in range(cantidad):
+            print(f"Cliente:{i+1}")
+            while True:
+
+
+
+
