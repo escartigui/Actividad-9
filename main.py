@@ -11,7 +11,9 @@ def menu():
         for i in range(cantidad):
             print(f"Cliente:{i+1}")
             while True:
-
-
-
-
+                print("ingrese codigo del cliente: ")
+                codigo = input()
+                if codigo in clientes:
+                    print(f"El cliente ya existe")
+                else:
+                    clientes[codigo] = {}
